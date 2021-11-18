@@ -1,0 +1,58 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: flex-start; 
+    flex-direction: row;
+    width: 90%;
+    margin: 10px auto;
+    
+
+}
+.product {
+   width: 28%;
+    border:1px black solid;
+    margin-bottom: 40px;
+ padding: 1%;
+ border-radius: 5px;
+ margin-right: 2%;
+ box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+}
+img {
+    width: 80%;
+    height: 300px;
+  display: block;
+  margin: 5px auto;
+
+}
+h2 {
+margin-bottom: 5px;
+text-align: center;
+font-size: 28px;
+}
+p {
+ margin-bottom: 40px;
+ line-height: 25px;
+ text-align: left;
+}
+.price{
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 40px;
+}
+button {
+    display: block;
+margin: auto;
+background-color: transparent;
+padding: 5px 10px;
+border-radius: 5px;
+color: blue;
+border: 1px blue solid;
+font-size: 20px;
+transition: all 0.3s ease-in-out;
+}
+button:hover {
+    color: white;
+    background-color: blue;
+   
+}
