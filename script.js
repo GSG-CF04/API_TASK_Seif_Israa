@@ -76,3 +76,17 @@ const  addToProductShop = (price,id) => {
         }
     sumTotal();
 }
+const sumTotal = () => {
+        let rows= document.querySelectorAll('table tbody tr')
+        let total= document.getElementById('total')
+        var sum=0
+        for(var i=0; i < (rows.length) ; i++) {
+            var row=rows[i]
+            var priceElement=row.querySelector(`.price-shop`)
+            var quantity=row.querySelector(`.quantity`).innerText
+            var m = priceElement.innerText;
+            var price=parseFloat(m.replace('$',''))
+                sum = sum+(price*quantity)                 
+        }
+       total.innerText=sum.toFixed(2) +"$"
+}
