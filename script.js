@@ -90,3 +90,9 @@ const sumTotal = () => {
         }
        total.innerText=sum.toFixed(2) +"$"
 }
+
+const removeProduct = (id) => {
+        let deletedELment = document.getElementById(`${id}`);
+        deletedELment.remove()
+       sumTotal();
+}
