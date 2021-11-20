@@ -8,10 +8,90 @@ h1 {
     font-size: 50px;
     text-transform: uppercase;
     margin-top: 4%;
-    margin-bottom: 4%;
+    /* margin-bottom: 4%; */
     letter-spacing: 3px;
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
+/* Shooping Style */
+.shopping{
+    width: 1000px;
+    margin: 10px auto 70px;
+    position: relative;
+}
+.btn-shop {
+    display: block;
+    margin: auto;
+    background-color: transparent;
+    padding: 5px 10px;;
+    color: blue;
+    border: none;
+    font-size: 30px;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.btn-shop i {
+    transform:rotateY(180deg);
+}
+.product-shop{
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 17px;
+    border-radius: 5px;
+    z-index: 10;
+    padding: 10px;
+    background-color: #cccccd;
+    box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
+}
+.blocked {
+    display: block;
+}
+table {
+    display: block;
+    border-collapse: collapse;
+}
+table thead {
+    text-align: center;
+}
+table thead th { 
+    padding-right: 30px;
+}
+table tbody{
+    text-align: center;
+}
+table tbody tr{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+table tbody tr:nth-of-type(2n) {
+    background-color: #dadae2;
+}
+table tbody tr td {
+    padding: 10px;
+}
+table tbody tr td button  {
+    background-color: transparent;
+    color: #FF0000;
+    border: none;
+    font-size: 16px;
+}
+
+hr {
+    margin: 5px;
+}
+.total {
+    padding: 2px 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+}
+
+
+
+/* end shopping style */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -22,7 +102,6 @@ h1 {
 }
 .product {
     width: 31%;
-    border:1px black solid;
     margin-bottom: 30px;
     padding: 1%;
     border-radius: 5px;
@@ -57,7 +136,7 @@ p {
     text-align: center;
     font-size: 40px;
 }
-button {
+.add-to-card {
     display: block;
     margin: auto;
     background-color: transparent;
@@ -69,24 +148,30 @@ button {
     transition: all 0.5s ease-in-out;
     margin-bottom: 20px;
 }
-button:hover {
+.add-to-card:hover {
     color: white;
     background-color: blue;
 }
 @media screen and (max-width: 768px) {
     h1 {font-size: 40px;}
+    .shopping{width: 300px; }
+    .btn-shop{right: 0;}
+    .product-shop{right: 0px;}
     .cards{flex-direction: column;width: 300px;}
     .product { width: 100%; margin-bottom: 20px;}
     h2 { font-size: 18px;height: 70px;}
     p{  margin-bottom: 20px;}
-    button{margin-bottom: 20px;}
+    .add-to-card{margin-bottom: 20px;}
 }
 @media screen and  (min-width: 769px) and (max-width: 1023px) {
     h1 {font-size: 40px;}
+    .shopping{width: 700px; }
+    .btn-shop{right: 17px;}
+    .product-shop{right: 25px;}
     .cards{ width: 700px;}
     .product { width: 47%;margin-bottom: 20px;}
     .product:nth-of-type(3n) { margin-right: 3%;} 
     h2 { font-size: 18px;}
     p{  margin-bottom: 20px;}
-    button{margin-bottom: 20px;}
+    .add-to-card{margin-bottom: 20px;}
 }
