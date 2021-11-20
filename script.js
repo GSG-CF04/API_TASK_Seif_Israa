@@ -44,7 +44,35 @@ fetch('https://fakestoreapi.com/products')
         <h2>${element.title}</h2>
         <p>${element.description}</p>
         <span class="price">${element.price}$</span>
-        <button>Add to Card</button>
+        <button class="add-to-card" onclick="addToProductShop(${element.price},${element.id})">Add to Card</button>
         </div>`
 }))
 .catch(err => alert(err))
+
+ let tbody=document.querySelector('tbody')
+const  addToProductShop = (price,id) => {
+        console.log(5)
+        let rows= document.querySelectorAll('table tbody tr')
+        let quantity=document.getElementsByClassName('quantity') 
+        if (rows.length == 0 ) {
+                tbody.innerHTML += `<tr id ="${id}">
+                <td class="quantity">1</td>
+                <td class="price-shop">${price}$</td>
+                <td> <button type="button" class="btn-remove" onclick="removeProduct(${id})"><i class="fas fa-trash-alt"></i></button></td>
+        </tr>`
+        }else {
+                 if(document.getElementById(`${id}`)) {
+                        let quntityELment = document.getElementById(`${id}`).childNodes[1]
+                        let quentityValue=quntityELment.innerText 
+                        quentityValue = parseInt(quentityValue) + 1
+                        quntityELment.innerText =quentityValue 
+                }else {
+                        tbody.innerHTML += `<tr id ="${id}">
+                        <td class="quantity">1</td>
+                        <td class="price-shop">${price}$</td>
+                        <td> <button type="button" class="btn-remove" onclick="removeProduct(${id})"><i class="fas fa-trash-alt"></i></button></td>
+                        </tr>`
+                }
+        }
+    sumTotal();
+}
