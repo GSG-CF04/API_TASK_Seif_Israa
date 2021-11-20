@@ -96,3 +96,27 @@ const removeProduct = (id) => {
         deletedELment.remove()
        sumTotal();
 }
+const btn = document.createElement("button");
+btn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+btn.onclick = function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+  };
+btn.id = "myBtn";
+
+
+document.body.appendChild(btn);
+
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
