@@ -8,11 +8,11 @@ h1 {
     font-size: 50px;
     text-transform: uppercase;
     margin-top: 4%;
-    /* margin-bottom: 4%; */
     letter-spacing: 3px;
+    color:#d9d9ff;
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
-/* Shooping Style */
+/*  Start Shooping Style */
 .shopping{
     width: 1000px;
     margin: 10px auto 70px;
@@ -32,9 +32,7 @@ h1 {
     top: 5px;
     right: 5px;
 }
-.btn-shop i {
-    transform:rotateY(180deg);
-}
+.btn-shop i { transform:rotateY(180deg);}
 .product-shop{
     display: none;
     position: absolute;
@@ -43,55 +41,36 @@ h1 {
     border-radius: 5px;
     z-index: 10;
     padding: 10px;
-    background-color: #cccccd;
+    background-color: #dbdbe5;
     box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
 }
-.blocked {
-    display: block;
-}
+.blocked { display: block;}
 table {
     display: block;
     border-collapse: collapse;
+    color:#363695;
 }
-table thead {
-    text-align: center;
-}
-table thead th { 
-    padding-right: 30px;
-}
-table tbody{
-    text-align: center;
-}
-table tbody tr{
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-table tbody tr:nth-of-type(2n) {
-    background-color: #dadae2;
-}
-table tbody tr td {
-    padding: 10px;
-}
+table thead th { width:80px }
+table tbody{ text-align: center;}
+table tbody tr{ margin-bottom: 10px; font-size: 16px; }
+table tbody tr:nth-of-type(2n) { background-color: #bbbbcb;}
+table tbody tr td { padding: 10px;}
 table tbody tr td button  {
     background-color: transparent;
     color: #FF0000;
     border: none;
     font-size: 16px;
 }
-
-hr {
-    margin: 5px;
-}
+hr { margin: 5px;}
 .total {
     padding: 2px 8px;
     display: flex;
     justify-content: space-between;
     font-size: 22px;
+    color:#363695;
 }
-
-
-
 /* end shopping style */
+/* start product style */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -148,38 +127,8 @@ p {
     transition: all 0.5s ease-in-out;
     margin-bottom: 20px;
 }
-.add-to-card:hover {
-    color: white;
-    background-color: blue;
-}
-@media screen and (max-width: 768px) {
-    h1 {font-size: 40px;}
-    .shopping{width: 300px; }
-    .btn-shop{right: 0;}
-    .product-shop{right: 0px;}
-    .cards{flex-direction: column;width: 300px;}
-    .product { width: 100%; margin-bottom: 20px;}
-    h2 { font-size: 18px;height: 70px;}
-    p{  margin-bottom: 20px;}
-    .add-to-card{margin-bottom: 20px;}
-}
-@media screen and  (min-width: 769px) and (max-width: 1023px) {
-    h1 {font-size: 40px;}
-    .shopping{width: 700px; }
-    .btn-shop{right: 17px;}
-    .product-shop{right: 25px;}
-    .cards{ width: 700px;}
-    .product { width: 47%;margin-bottom: 20px;}
-    .product:nth-of-type(3n) { margin-right: 3%;} 
-    h2 { font-size: 18px;}
-    p{  margin-bottom: 20px;}
-    .add-to-card{margin-bottom: 20px;}
-}
-
-
-
-
-
+/* end product style */
+/* start scroll button style */
 #myBtn {
     display: none; 
     position: fixed; 
@@ -196,8 +145,53 @@ p {
     font-size: 18px;
     border: 1px blue solid;
   }
-  
-  #myBtn:hover {
-    background-color: blue;
-    color: white;
+  /* end scroll button style */
+  /* start categories style */
+  .categories {
+      width: 1000px;
+      margin: 30px auto 5px;
+      display: flex;
+      justify-content: center;
   }
+  .cat-type {
+      cursor: pointer;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid blue;
+      color: blue;
+      border-radius: 10px;
+      margin-left: 10px;
+      font-size: 20px;
+      text-transform: capitalize;
+  }
+  .active,.add-to-card:hover, #myBtn:hover { 
+       background-color: blue; color: #fff;
+  }
+   /* start categories style */
+  @media screen and (max-width: 768px) {
+    h1 {font-size: 40px;}
+    .shopping{width: 300px; }
+    .btn-shop{right: 0;}
+    .product-shop{right: 0px;}
+    .cards{flex-direction: column;width: 300px;}
+    .product { width: 100%; margin-bottom: 20px;}
+    h2 { font-size: 18px;height: 70px;}
+    p{  margin-bottom: 20px;}
+    .add-to-card{margin-bottom: 20px;}
+    .categories {width:300px;flex-direction: column;}
+    .cat-type {margin-bottom: 8px};
+}
+@media screen and  (min-width: 769px) and (max-width: 1023px) {
+    h1 {font-size: 40px;}
+    .shopping{width: 700px; }
+    .btn-shop{right: 17px;}
+    .product-shop{right: 25px;}
+    .cards{ width: 700px;}
+    .product { width: 47%;margin-bottom: 20px;}
+    .product:nth-of-type(3n) { margin-right: 3%;} 
+    h2 { font-size: 18px;}
+    p{  margin-bottom: 20px;}
+    .add-to-card{margin-bottom: 20px;}
+    .categories {width:700px;justify-content: space-evenly;}
+    .cat-type {margin-bottom: 8px};
+}
