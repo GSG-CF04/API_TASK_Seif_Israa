@@ -1,10 +1,10 @@
-
 ## Prerequisite Knowledge
 #### Basics of HTML, CSS and JS (specially Promise and Fetch API)
 
 ## Features
 - [ ] Responsive
 - [ ] Display Product from [API](https://fakestoreapi.com)
+- [ ] Show products acoording to type
 - [ ] Add Product to shop card
 - [ ] Remove Product that not you need after click button add to card
 - [ ] Total price for all product your choose
@@ -26,6 +26,7 @@ Visit this [link](https://gsg-cf04.github.io/API_TASK_Seif_Israa/)
 - Israa Hamdi Abu Rayya
 - Seif elddin Kamal Elnuweiri
 
-## Website Design
-![](https://i.imgur.com/3sMiMGi.jpg)
 
+
+## Website Design
+![](https://i.imgur.com/dbS2py3.jpg)
